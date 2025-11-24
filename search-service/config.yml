@@ -1,0 +1,16 @@
+server:
+  applicationConnectors:
+    - type: http
+      port: 8080
+  adminConnectors:
+    - type: http
+      port: 8081
+
+eureka:
+  serviceUrl:
+    defaultZone: http://eureka-server:8761/eureka/
+  serviceName: search-service
+
+elasticsearch:
+  hostname: elasticsearch
+  port: 9200

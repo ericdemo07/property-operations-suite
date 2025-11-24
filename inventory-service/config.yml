@@ -1,0 +1,18 @@
+server:
+  applicationConnectors:
+    - type: http
+      port: 8080
+  adminConnectors:
+    - type: http
+      port: 8081
+
+eureka:
+  serviceUrl:
+    defaultZone: http://eureka-server:8761/eureka/
+  serviceName: inventory-service
+
+database:
+  driverClass: org.postgresql.Driver
+  url: jdbc:postgresql://inventory-db:5432/inventorydb
+  user: user
+  password: password

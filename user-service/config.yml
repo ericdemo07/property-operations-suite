@@ -1,0 +1,18 @@
+server:
+  applicationConnectors:
+    - type: http
+      port: 8080
+  adminConnectors:
+    - type: http
+      port: 8081
+
+eureka:
+  serviceUrl:
+    defaultZone: http://eureka-server:8761/eureka/
+  serviceName: user-service
+
+database:
+  driverClass: org.postgresql.Driver
+  url: jdbc:postgresql://user-db:5432/userdb
+  user: user
+  password: password

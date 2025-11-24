@@ -1,0 +1,16 @@
+server:
+  applicationConnectors:
+    - type: http
+      port: 8761
+  adminConnectors:
+    - type: http
+      port: 8762
+
+eureka:
+  instance:
+    hostname: eureka-server
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://eureka-server:8761/eureka/

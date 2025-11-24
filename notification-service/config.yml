@@ -1,0 +1,16 @@
+server:
+  applicationConnectors:
+    - type: http
+      port: 8080
+  adminConnectors:
+    - type: http
+      port: 8081
+
+eureka:
+  serviceUrl:
+    defaultZone: http-server:8761/eureka/
+  serviceName: notification-service
+
+rabbitmq:
+  hostname: rabbitmq
+  port: 5672
