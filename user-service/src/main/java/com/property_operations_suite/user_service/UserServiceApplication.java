@@ -1,10 +1,9 @@
-package com.example;
+package com.property_operations_suite.user_service;
 
 import com.netflix.appinfo.ApplicationInfoManager;
 import com.netflix.appinfo.EurekaInstanceConfig;
 import com.netflix.appinfo.InstanceInfo;
 import com.netflix.appinfo.MyDataCenterInfo;
-import com.netflix.appinfo.providers.EurekaConfigBasedInstanceInfoProvider;
 import com.netflix.discovery.DefaultEurekaClientConfig;
 import com.netflix.discovery.DiscoveryClient;
 import com.netflix.discovery.EurekaClient;
@@ -46,57 +45,126 @@ public class UserServiceApplication extends Application<UserServiceConfiguration
                     public String getNamespace() {
                         return null;
                     }
-                    
+
                     // Implement other methods with default values or from config
                     @Override
-                    public String getInstanceId() { return null; }
-                    @Override
-                    public String getAppGroupName() { return null; }
-                    @Override
-                    public boolean isInstanceEnabledOnit() { return false; }
-                    @Override
-                    public int getNonSecurePort() { return 8080; }
-                    @Override
-                    public int getSecurePort() { return 0; }
-                    @Override
-                    public boolean isNonSecurePortEnabled() { return true; }
-                    @Override
-                    public boolean getSecurePortEnabled() { return false; }
-                    @Override
-                    public int getLeaseRenewalIntervalInSeconds() { return 30; }
-                    @Override
-                    public int getLeaseExpirationDurationInSeconds() { return 90; }
-                    @Override
-                    public String getVirtualHostName() { return getAppname(); }
-                    @Override
-                    public String getSecureVirtualHostName() { return getAppname(); }
-                    @Override
-                    public String getASGName() { return null; }
-                    @Override
-                    public String getHostName(boolean refresh) { return "localhost"; }
-                    @Override
-                    public java.util.Map<String, String> getMetadataMap() { return null; }
-                    
-                    public com.netflix.appinfo.DataCenterInfo getDataCenterInfo() { return new MyDataCenterInfo(MyDataCenterInfo.Name.MyOwn); }
+                    public String getInstanceId() {
+                        return null;
+                    }
 
                     @Override
-                    public String getIpAddress() { return "127.0.0.1"; }
+                    public String getAppGroupName() {
+                        return null;
+                    }
+
                     @Override
-                    public String getStatusPageUrlPath() { return "/info"; }
+                    public boolean isInstanceEnabledOnit() {
+                        return false;
+                    }
+
                     @Override
-                    public String getStatusPageUrl() { return "http://localhost:8081/info"; }
+                    public int getNonSecurePort() {
+                        return 8080;
+                    }
+
                     @Override
-                    public String getHomePageUrlPath() { return "/"; }
+                    public int getSecurePort() {
+                        return 0;
+                    }
+
                     @Override
-                    public String getHomePageUrl() { return "http://localhost:8080/"; }
+                    public boolean isNonSecurePortEnabled() {
+                        return true;
+                    }
+
                     @Override
-                    public String getHealthCheckUrlPath() { return "/healthcheck"; }
+                    public boolean getSecurePortEnabled() {
+                        return false;
+                    }
+
                     @Override
-                    public String getHealthCheckUrl() { return "http://localhost:8081/healthcheck"; }
+                    public int getLeaseRenewalIntervalInSeconds() {
+                        return 30;
+                    }
+
                     @Override
-                    public String getSecureHealthCheckUrl() { return null; }
+                    public int getLeaseExpirationDurationInSeconds() {
+                        return 90;
+                    }
+
                     @Override
-                    public String[] getDefaultAddressResolutionOrder() { return new String[0]; }
+                    public String getVirtualHostName() {
+                        return getAppname();
+                    }
+
+                    @Override
+                    public String getSecureVirtualHostName() {
+                        return getAppname();
+                    }
+
+                    @Override
+                    public String getASGName() {
+                        return null;
+                    }
+
+                    @Override
+                    public String getHostName(boolean refresh) {
+                        return "localhost";
+                    }
+
+                    @Override
+                    public java.util.Map<String, String> getMetadataMap() {
+                        return null;
+                    }
+
+                    public com.netflix.appinfo.DataCenterInfo getDataCenterInfo() {
+                        return new MyDataCenterInfo(MyDataCenterInfo.Name.MyOwn);
+                    }
+
+                    @Override
+                    public String getIpAddress() {
+                        return "127.0.0.1";
+                    }
+
+                    @Override
+                    public String getStatusPageUrlPath() {
+                        return "/info";
+                    }
+
+                    @Override
+                    public String getStatusPageUrl() {
+                        return "http://localhost:8081/info";
+                    }
+
+                    @Override
+                    public String getHomePageUrlPath() {
+                        return "/";
+                    }
+
+                    @Override
+                    public String getHomePageUrl() {
+                        return "http://localhost:8080/";
+                    }
+
+                    @Override
+                    public String getHealthCheckUrlPath() {
+                        return "/healthcheck";
+                    }
+
+                    @Override
+                    public String getHealthCheckUrl() {
+                        return "http://localhost:8081/healthcheck";
+                    }
+
+                    @Override
+                    public String getSecureHealthCheckUrl() {
+                        return null;
+                    }
+
+                    @Override
+                    public String[] getDefaultAddressResolutionOrder() {
+                        return new String[0];
+                    }
                 };
 
                 EurekaClientConfig clientConfig = new DefaultEurekaClientConfig() {

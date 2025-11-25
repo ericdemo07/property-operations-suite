@@ -19,7 +19,7 @@
               <transformers>
                 <transformer />
                 <transformer>
-                  <mainClass>com.example.UserServiceApplication</mainClass>
+                  <mainClass>com.property_operations_suite.user_service.UserServiceApplication</mainClass>
                 </transformer>
               </transformers>
             </configuration>

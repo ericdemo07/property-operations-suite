@@ -1,4 +1,4 @@
-package com.example;
+package com.property_operations_suite.api_gateway;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
